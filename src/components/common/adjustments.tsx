@@ -40,7 +40,7 @@ export default function Adjustments({
   setGradientType: SetStateType<typeof gradientType>;
 }) {
   return (
-    <div className="text-center mt-10 w-full space-y-2 mx-auto flex flex-col justify-center">
+    <div className="text-center mt-5 w-full space-y-2 mx-auto flex flex-col justify-center">
       <div className="space-y-1">
         <p className="text-sm">Number of pickers (max: 3, min: 1)</p>
         <div className="mx-auto flex justify-center space-x-2">
@@ -93,7 +93,10 @@ export default function Adjustments({
       <div className="space-y-1">
         <p className="text-sm">Gradient Type</p>
         <ToggleGroup
-          onValueChange={(type: "linear" | "radial") => setGradientType(type)}
+          unselectable={"on"}
+          onValueChange={(type: "linear" | "radial") =>
+            type && setGradientType(type)
+          }
           type="single"
           defaultValue="linear"
         >

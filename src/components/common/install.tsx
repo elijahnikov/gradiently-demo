@@ -7,7 +7,7 @@ import { FaNpm, FaGithub } from "react-icons/fa";
 
 export default function Install() {
   return (
-    <div className="flex mt-2 mb-5">
+    <div className="block sm:flex mt-2 mb-5">
       <div className="bg-white max-w-[600px] min-w-[300px] border-2 border-gray-300 justify-between mt-2 items-center rounded-lg px-2 py-1 flex">
         <p className="text-sm text-gray-800">npm install gradiently</p>
         <Button
@@ -29,7 +29,7 @@ export default function Install() {
           <Copy size={15} />
         </Button>
       </div>
-      <div className="space-x-2 ml-2 mt-[10px]">
+      <div className="text-center space-x-2 ml-2 mt-[10px]">
         <a
           href="https://www.npmjs.com/package/gradiently"
           target="_blank"
