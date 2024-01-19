@@ -5,6 +5,7 @@ import Header from "@/components/common/header";
 import { Button } from "@/components/ui/button";
 import { ColorWheel, DirectionsIndex } from "gradiently";
 import _ from "lodash";
+import { Copy } from "lucide-react";
 import { useState } from "react";
 import { FaGithub, FaNpm } from "react-icons/fa";
 
@@ -49,6 +50,15 @@ export default function Home() {
           direction={direction}
           onChange={setGradient}
         />
+      </div>
+      <div className="bg-white max-w-[600px] min-w-[300px] border-2 border-gray-300 justify-between mt-4 items-center rounded-lg p-1 pl-2 flex">
+        <p className="text-sm text-gray-800">{gradient}</p>
+        <Button
+          onClick={() => navigator.clipboard.writeText(gradient)}
+          className="ml-2 px-2 py-1"
+        >
+          <Copy size={15} />
+        </Button>
       </div>
       <Adjustments
         pickers={pickers}
