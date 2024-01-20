@@ -46,11 +46,13 @@ export default function Home() {
       </div>
       <div className="flex">
         <ColorCopy gradient={gradient} />
-        <DownloadImageButton
-          direction={direction}
-          gradient={gradient}
-          pickers={pickers}
-        />
+        {gradient && (
+          <DownloadImageButton
+            direction={direction}
+            gradient={gradient}
+            pickers={pickers}
+          />
+        )}
       </div>
       <Adjustments
         pickers={pickers}
