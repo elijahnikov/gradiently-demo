@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { GeistMono } from "geist/font/mono";
 import { Toaster } from "sonner";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={GeistMono.className}>{children}</body>
+      <body className={GeistMono.className}>
+        {children}
+        <Analytics />
+      </body>
       <Toaster />
     </html>
   );
