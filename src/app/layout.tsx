@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={GeistMono.className}>
         {children}
-        {/* <Analytics /> */}
+        <Analytics />
       </body>
       <Toaster />
     </html>
